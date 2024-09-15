@@ -9,9 +9,10 @@ int main()
 	FILE *fd;
 	int x;
 	
-	x = 5;
+	x = fork();
 	while(1)
 	{
+		printf("%d\n", x);
 		fd = fopen("test.txt", "a");
 		fprintf(fd, "%d\n", x);
 		fclose(fd);
